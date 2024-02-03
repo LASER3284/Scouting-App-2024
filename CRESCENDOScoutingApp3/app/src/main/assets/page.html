@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr"></html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2" />
+    <title>CRESCENDO Scouting App</title>
+    <link rel="manifest" href="/manifest.json">
+    <script src="page.js" defer></script>
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+<h1>CRESCENDO Scouting</h1>
+
+<form id="scouting-app" action="match.php" method="get">
+
+    <div class="question">
+        <h3> Please select your name.</h3>
+        <select name="Name" id="name" style="width: 10%;">
+            <option value="">select name</option>
+            <option value="akira">Akira Hobo</option>
+            <option value="alex">Alex Leuwerke</option>
+            <option value="alyson">Alyson Schupp</option>
+            <option value="andy">Andy Heikes</option>
+            <option value="anthony">Anthony Davis</option>
+            <option value="cameron">Cameron Meyerhoeffer</option>
+            <option value="ayzee">Ayzee Patton</option>
+            <option value="david">David Peters</option>
+            <option value="emma">Emma Weiss</option>
+            <option value="enoch">Enoch Madsen</option>
+            <option value="ezekiel">Ezekiel Carter</option>
+            <option value="gage">Gage Smith</option>
+            <option value="isabel">Isabel Adair</option>
+            <option value="jamis">Jamis Borg</option>
+            <option value="johnathon">Johnathon Salinas</option>
+            <option value="kaitlyn">Kaitlyn Jones</option>
+            <option value="kayla">Kayla Peters</option>
+            <option value="keaton">Keaton Rohrer</option>
+            <option value="keith">Keith Bass</option>
+            <option value="kelley">Kelley Grass</option>
+            <option value="lexi">Lexi Keeth</option>
+            <option value="lizbeth">Lizbeth Burgos</option>
+            <option value="lola">Lola Sheppard</option>
+            <option value="meagan">Meagan Thompson</option>
+            <option value="mia">Mia Aufdenkamp</option>
+            <option value="naomi">Naomi Davis</option>
+            <option value="nate">Nate Franklin</option>
+            <option value="owen">Owen Combs</option>
+            <option value="rayne">Rayne Christiansen</option>
+            <option value="william">William Long</option>
+        </select>
+    </div>
+
+    <div class="question">
+        <h3>Team Number: </h3>
+        <input type="text" name="Team_Num" id="team_num" placeholder="enter number" style="width: 15%">
+    </div>
+
+    <div class="question">
+        <h3>Placement: </h3>
+        <select name="spot" id="post" width="10%">
+            <option value="r1">Red 1</option>
+            <option value="r2">Red 2</option>
+            <option value="r3">Red 3</option>
+            <option value="b1">Blue 1</option>
+            <option value="b2">Blue 2</option>
+            <option value="b3">Blue 3</option>
+        </select>
+    </div>
+    <br>
+    <br>
+    <h2>Autonomous</h2>
+    <form id="mobility">
+        <label class="container">Leave:
+            <input type="checkbox" id="mobile?" >
+        </label>
+    </form>
+    <p id="AUTOAMPATT">
+        <label>Amp Notes Attempted: </label>
+        <button type=button onclick="AUTOAMPATT_UP()">+</button>
+        <input type="text" id="auto-ampatt" value="0"></input>
+        <button type=button onclick="AUTOAMPATT_DOWN()">-</button>
+    </p>
+    <p id="AUTOAMP">
+        <label>Amp Notes:</label>
+        <button type=button onclick="AUTOAMP_UP()">+</button>
+        <input type="text" id="auto-amp" value="0"></input>
+        <button type=button onclick="AUTOAMP_DOWN()">-</button>
+    </p>
+    <p id="AUTOSPKRATT">
+        <label>Speaker Notes Attempted: </label>
+        <button type=button onclick="AUTOSPKRATT_UP()">+</button>
+        <input type="text" id="auto-spkratt" value="0"></input>
+        <button type=button onclick="AUTOSPKRATT_DOWN()">-</button>
+    </p>
+    <p id="AUTOSPKR">
+        <label>Speaker Notes: </label>
+        <button type=button onclick="AUTOSPKR_UP()">+</button>
+        <input type="text" id="auto-spkr" value="0"></input>
+        <button type=button onclick="AUTOSPKR_DOWN()">-</button>
+    </p>
+    <br>
+    <br>
+    <h2>Tele-Op</h2>
+    <p id="TELEAMPATT">
+        <label>Amp Note Attmepts:</label>
+        <button type=button onclick="TELEAMPATT_UP()">+</button>
+        <input type="text" id="tele-ampatt" value="0"></input>
+        <button type=button onclick="TELEAMPATT_DOWN()">-</button>
+    </p>
+    <p id="TELEAMP">
+        <label>Amp Notes:</label>
+        <button type=button onclick="TELEAMP_UP()">+</button>
+        <input type="text" id="tele-amp" value="0"></input>
+        <button type=button onclick="TELEAMP_DOWN()">-</button>
+    </p>
+    <p id="TELESPKRATT">
+        <label>Speaker Note Attempts:</label>
+        <button type=button onclick="TELESPKRATT_UP()">+</button>
+        <input type="text" id="tele-spkratt" value="0"></input>
+        <button type=button onclick="TELESPKRATT_DOWN()">-</button>
+    </p>
+    <p id="TELESPKR">
+        <label>Speaker Notes:</label>
+        <button type=button onclick="TELESPKR_UP()">+</button>
+        <input type="text" id="tele-spkr" value="0"></input>
+        <button type=button onclick="TELESPKR_DOWN()">-</button>
+    </p>
+    <br>
+    <br>
+    <h2>Endgame</h2>
+    <label class="park">Park:
+        <input type="checkbox" id="park">
+    </label>
+    <br>
+    <label class="onstage">Onstage:
+        <input type="checkbox" id="onstage">
+    </label>
+    <h3> Harmony: </h3>
+    <label class="two">Two Robots:
+        <input type="checkbox" id="two">
+    </label>
+    <label class="three">Three Robots:
+        <input type="checkbox" id="three">
+    </label>
+    <p id="TRAP">
+        <label>Trap Notes (0-3):</label>
+        <button type=button onclick="TRAP_UP()">+</button>
+        <input type="text" id="trap" value="0"></input>
+        <button type=button onclick="TRAP_DOWN()">-</button>
+    </p>
+    <br>
+    <br>
+    <div class="question">
+        <h3>Notes: </h3>
+        <input type="text" name="notes" id="notes" placeholder="notes if applicable" style="width: 20%">
+    </div>
+    <br>
+    <br>
+    <button type="button" onclick="saveFormData()">Save</button>
+</form>
+</body>
+</html>
