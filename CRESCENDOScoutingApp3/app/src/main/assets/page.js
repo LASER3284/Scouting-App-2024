@@ -108,6 +108,7 @@ let fileNumber = 1;
 async function saveFormData() {
     var name = document.getElementById('name').value;
     var team_num = document.getElementById('team_num').value;
+    var match_num = document.getElementById('match_num').value;
     var post = document.getElementById('post').value;
     var leave = document.getElementById('mobile?').checked;
     var AUTOAMPATT = document.getElementById('auto-ampatt').value;
@@ -125,9 +126,9 @@ async function saveFormData() {
     var trap = document.getElementById('trap').value;
     var notes = document.getElementById('notes').value;
 
-    var csvContent = "Name,Team Number,Position,Leave,Amp Attempts,Amp,Speaker Attempts,Speaker,Amp Attempts,Amp,Speaker Attempts,Speaker," +
+    var csvContent = "Name,Team Number,Match Number,Position,Leave,Amp Attempts,Amp,Speaker Attempts,Speaker,Amp Attempts,Amp,Speaker Attempts,Speaker," +
     "Park,Onstage,Harmony(2),Harmony(3),Trap,Notes\n"
-      + name + "," + team_num + "," + post + ","
+      + name + "," + team_num + "," + match_num + "," + post + ","
       + leave + "," + AUTOAMPATT + "," + AUTOAMP + "," + AUTOSPKRATT + "," +
       AUTOSPKR + "," + TELEAMPATT + "," + TELEAMP + "," + TELESPKRATT + "," +
       TELESPKR  + "," + park + "," + onstage +  "," + two + ","
